@@ -55,3 +55,34 @@ $(document).ready(function () {
     $($closebtn).fadeOut("800");
   });
 });
+function validation() {
+  var name = document.getElementById("name").value;
+  var mobileNo = document.getElementById("mobile no.").value;
+  var emailAddress = document.getElementById("email address").value;
+  var message = document.getElementById("message").value;
+  var error_message = document.getElementById("error_message").value;
+  var text;
+  error_message.style.padding = "10px";
+  if (name.length < 5) {
+    text = "Please Enter Valid Name";
+    error_message.innerHTML = "text";
+    return false;
+  }
+  if (isNaN(mobileNo) || mobileNo.length != 10) {
+    text = "Please Enter Valid Mobile No.";
+    error_message.innerHTML = "text";
+    return false;
+  }
+  if (emailAddress.indexOf("@") == -1 || emailAddress.length < 6) {
+    text = "Please Enter Valid Email";
+    error_message.innerHTML = "text";
+    return false;
+  }
+  if (message.length <= 100) {
+    text = "Please Enter More Than 100 Characters";
+    error_message.innerHTML = "text";
+    return false;
+  }
+  alert("Form Submitted Sucessfully");
+  return true;
+}
