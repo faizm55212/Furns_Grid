@@ -53,7 +53,7 @@ header {
   top: 0;
   left: 0;
   transition: background-color 0.5s ease;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .container {
@@ -74,13 +74,14 @@ header {
 }
 .top-most h4 {
   font-family: "Fredoka", sans-serif;
+  font-size: 16px;
   margin-left: 43%;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .top-most-inner {
   margin: 0;
-  padding: 3px 20px 5px;
+  padding: 5px 20px 6px;
   margin-left: auto;
 }
 
@@ -98,12 +99,94 @@ header {
 
 .top-most a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .top-most-cta:hover {
   background-color: #df871b;
 }
+
+/* ..................... Login/Signup-Popup ...................... */
+.login-popup,
+.signup-popup {
+  position: absolute;
+  display: none;
+  padding: 25px;
+  width: 450px;
+  font-size: 16px;
+  top: 48%;
+  left: 50%;
+  background-color: #fff;
+  border: 3px solid #0e0c0c;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, 50%);
+  z-index: 100;
+}
+.login-popup h2,
+.signup-popup h2 {
+  padding-bottom: 10px;
+}
+form {
+  font-size: 16px;
+  border-radius: 4px;
+}
+.login-input {
+  width: 350px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+login-input:focus {
+  background-color: #dddddd;
+  outline: none;
+}
+.login-button,
+.signupbtn-login {
+  background-color: #af4c4c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 340px;
+  opacity: 0.9;
+}
+.signupbtn-login {
+  width: 40%;
+  margin-right: 10px;
+}
+.signupbtn {
+  background-color: #af4c4c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 49%;
+  opacity: 0.9;
+}
+.signupbtn .signupbtn-login {
+  width: 40%;
+}
+
+span.psw {
+  display: block;
+  float: none;
+  padding-top: 16px;
+}
+hr {
+  border: 3px solid #2b1919;
+  margin-bottom: 25px;
+}
+b {
+  font-weight: bold;
+}
+
+/* ..................... Login/Signup-Popup ends ...................... */
 
 /*........................ NAVBAR.............................. */
 
@@ -120,12 +203,12 @@ header {
 .nav a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .nav .logo {
   font-family: "KaushanScript", cursive;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -168,7 +251,7 @@ header {
 }
 
 .search_input {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   border: 0;
   outline: 0;
@@ -216,6 +299,9 @@ header {
 .scrolling-active .nav a {
   color: #313131;
 }
+.scrolling-active .search_input {
+  color: #313131;
+}
 
 .scrolling-active .searchbar {
   height: 40px;
@@ -243,7 +329,7 @@ header {
 
 .toggle-active .nav {
   text-align: center;
-  height: 27.5rem;
+  height: 30.8rem;
 }
 .toggle-active .nav a {
   color: #313131;
@@ -255,6 +341,10 @@ header {
   padding: 1px;
   background-color: #fff;
 }
+.toggle-active .search_input {
+  color: #313131;
+}
+
 .toggle-active .nav-link::after {
   background-color: #313131;
 }
@@ -285,7 +375,7 @@ header {
 
 .demo-content {
   width: 100%;
-  height: 50vh;
+  height: 25vh;
   background-color: #fff;
 }
 /* ..........................  Hero end .......................... */
@@ -296,14 +386,14 @@ header {
   position: absolute;
   padding-top: 12rem;
   left: 7rem;
-  width: 360px;
+  width: 480px;
   text-align: center;
   color: #fff;
   z-index: 1;
 }
 #testimonial-carousel {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-  height: 45rem;
+  height: 56rem;
   display: inline-block;
   width: 100%;
   padding-bottom: 10px;
@@ -364,18 +454,20 @@ header {
 }
 .home-decor-heading h1 {
   padding-left: 2px;
+  font-size: 40px;
   font-family: fatface;
 }
 .home-underline {
-  width: 168px;
+  width: 270px;
   height: 2px;
   background-color: orangered;
 }
 .home-row {
   position: relative;
-  margin: 0 0 30px 17%;
+  margin: 0 -8% 30px 10%;
 }
 .card-body h5 {
+  font-size: 15px;
   font-weight: 700;
 }
 .fa-cart-plus {
@@ -383,6 +475,7 @@ header {
 }
 
 .btn-danger {
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -391,8 +484,8 @@ header {
 }
 
 .office-decor-heading h1 {
+  font-size: 40px;
   margin-left: auto;
-  padding-right: 15px;
   font-family: fatface;
 }
 .office-underline {
@@ -403,7 +496,7 @@ header {
 }
 .office-row {
   position: relative;
-  margin: 0 17% 30px 0;
+  margin: 0 10% 30px -8%;
 }
 /* .......................... Home Decor ..........................*/
 
@@ -525,12 +618,14 @@ header {
 
 /* MODAL */
 .product-view-row-1,
-.product-view-row-2 {
+.product-view-row-2,
+.product-view-row-3,
+.product-view-row-4 {
   position: absolute;
   display: none;
-  width: 700px;
+  width: 900px;
   height: auto;
-  padding: 25px;
+  padding: 28px;
   border: 1px solid #ff7800;
   top: 45%;
   left: 50%;
@@ -569,30 +664,30 @@ header {
   height: auto;
   display: inline-block;
   float: right;
-  padding-right: 20px;
+  padding-right: 28px;
 }
 .product-big-desc h2 {
   margin: 0;
   font-weight: bold;
-  padding-bottom: 10px;
-  font-size: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
 }
 .product-big-desc h5 {
   margin: 0;
   color: #2a2a2a;
   font-weight: lighter;
-  padding-bottom: 8px;
-  font-size: 16px;
+  padding-bottom: 12px;
+  font-size: 18px;
 }
 .product-big-desc h6 {
   width: 100%;
   float: left;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 .product-big-desc h6 a {
   color: #b1b1b1;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin-right: 25px;
   display: block;
@@ -603,11 +698,11 @@ header {
   padding-top: 20px;
   width: 100%;
   float: left;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 .price .oldprice {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
   color: #a3a3a3;
   border-bottom: 1px solid #333;
@@ -620,7 +715,7 @@ header {
   font-weight: lighter;
 }
 .price .newprice {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 800;
   margin: 0;
   color: #333;
@@ -637,13 +732,13 @@ header {
   background-color: #ff7800;
   color: #fff;
   padding: 8px;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .product-view-footer {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* MODAL */

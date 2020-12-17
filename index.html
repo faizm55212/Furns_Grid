@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Furns_Grid</title>
     <!-- bootstrap cdn -->
     <link
       rel="stylesheet"
@@ -28,7 +28,7 @@
           <img src="images/fav.jpg" alt="fav" />
           <img src="images/user.jpg" alt="user" />
           <img src="images/store.jpg" alt="cart" />
-          <a href="#" class="top-most-cta">Login</a>
+          <a class="top-most-cta">Login</a>
         </div>
       </div>
       <div class="container">
@@ -48,19 +48,19 @@
           <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="nav-list navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html" class="nav-link">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" class="nav-link">Pricing</a>
+                <a class="nav-link" href="#home-decor">Home Decor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" class="nav-link">Dates</a>
+                <a class="nav-link" href="#office-decor">Office Decor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" class="nav-link">Testimonials</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" class="nav-link">Contact</a>
+                <a class="nav-link" href="#contact-us">Contact</a>
               </li>
             </ul>
             <div class="d-flex justify-content-center h-100">
@@ -71,7 +71,7 @@
                   name=""
                   placeholder="Search..."
                 />
-                <a href="#" class="search_icon"
+                <a class="search_icon"
                   ><i class="fas fa-search"></i
                 ></a>
               </div>
@@ -81,9 +81,105 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
       <!-- Testimonials -->
 
+      <!-- Login-Popup -->
+      <div class="login-popup">
+        <h2>Login</h2>
+        <div class="close-btn">X</div>
+        <form action="/action_page.php">
+          <div class="container-login">
+            <label><b>Username</b></label>
+            <input
+          class="login-input"
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          required
+            />
+            <label><b>Password</b></label>
+            <input
+          class="login-input"
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+            />
+            <button class="login-button" type="submit">Login</button>
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="remember"
+                style="margin-bottom: 15px"
+              />
+              Remember me
+            </label>
+    
+          </div>
+        </form>
+        <div
+              class="container-login-footer"
+              style="background-color: whitesmoke"
+            >
+               <button class="signupbtn-login">Sign Up</button>
+              <!---<button type="button" class="cancelbtn">Cancel</button>-->
+              <span class="forget-psw"
+              >Forget passwod?<a href="#"> Click Here!</a></span>
+            </div>
+      </div>
+      <!-- Login-Popup ends -->
+      <!-- Signup-Popup -->
+      <div class="signup-popup">
+        <h2>Sign Up</h2>
+        <div class="close-btn">X</div>
+        <form action="action_page.php">
+          <div class="container-signup">
+            <p>Please fill in this form to create an account.</p>
+            <hr />
+            <label for="Name"><b>Name</b></label>
+            <input class="login-input" type="name" placeholder=" Enter Name" name="nm" required />
+    
+            <label for="email"><b>Email</b></label>
+            <input class="login-input" type="text" placeholder="Enter Email" name="email" required />
+    
+            <label for="psw"><b>Password</b></label>
+            <input
+              class="login-input"
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+            <label>
+              <input
+                type="checkbox"
+                checked="checked"
+                name="remember"
+                style="margin-bottom: 15px"
+              />
+              Remember me
+            </label>
+    
+            <p>
+              By creating an account you agree to our
+              <a href="#" style="color: dodgerblue">Terms & Privacy</a>.
+            </p>
+    
+            <div class="clearfix">
+              <!---<button type="button" class="cancelbtn">Cancel</button>--->
+              <button type="submit" class="signupbtn">Sign Up</button>
+              <!---<button type="button" class="cancelbtn">Cancel</button>--->
+              <button type="button" class="signupbtn loginbtn-signup">LogIn</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- signup-Popup ends -->
+
+
+      
       <section id="testimonials">
         <div
           id="testimonial-carousel"
@@ -134,7 +230,7 @@
       </section>
     </section>
     <!-- Category 1 -->
-    <section class="home-decor">
+    <section class="home-decor" id="home-decor">
       <div class="container-fluid bg-light-grey">
         <div class="container pt-5">
           <div class="row home-decor-heading">
@@ -297,7 +393,7 @@
     <!-- Category 1 ends -->
 
     <!-- Category 2 -->
-    <section class="office-decor">
+    <section class="office-decor" id="office-decor">
       <div class="container-fluid bg-light-grey">
         <div class="container pt-5">
           <div class="row office-decor-heading">
@@ -310,13 +406,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/double-bed.jpg"
+                  src="/images/furniture/office-desk.jpg"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Double Bed</h5>
-                  <h5>$400.00</h5>
+                  <h5>Office Desk</h5>
+                  <h5>$100.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -327,13 +423,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/single-bed.jpg"
+                  src="images/furniture/office-shelves.jpg"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Single Bed</h5>
-                  <h5>$300.00</h5>
+                  <h5>Multipurpose Shelves</h5>
+                  <h5>$70.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -344,13 +440,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/coffee-table.jpeg"
+                  src="images/furniture/office-chair.webp"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Coffee Table</h5>
-                  <h5>$400.00</h5>
+                  <h5>Comfortable Chair</h5>
+                  <h5>$90.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -359,10 +455,10 @@
               </div>
             </div>
             <!-- Modal -->
-            <div class="product-view-row-1">
+            <div class="product-view-row-3">
               <div class="close-btn">X</div>
               <div class="product-big-image">
-                <img src="images/furniture/double-bed2.jpg" alt="double-bed">
+                <img src="/images/furniture/office-shelves.jpg" alt="double-bed">
               </div>
               <div class="product-big-desc">
                 <h2>Double Bed -Lorem Ipsum</h2>
@@ -384,13 +480,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/sofa-1.jpg"
+                  src="images/furniture/writing-table.jpg"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Sofa</h5>
-                  <h5>$400.00</h5>
+                  <h5>Writing Table</h5>
+                  <h5>$30.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -401,13 +497,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/bedSide-table-1.jpg"
+                  src="images/furniture/office-clock.jpg"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Bedside Table</h5>
-                  <h5>$400.00</h5>
+                  <h5>Cool Clocks</h5>
+                  <h5>$60.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -418,13 +514,13 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="images/furniture/chair-1.jpg"
+                  src="images/furniture/figurines.jpg"
                   class="card-img-top"
                   alt="pic1"
                 />
                 <div class="card-body">
-                  <h5>Chair</h5>
-                  <h5>$400.00</h5>
+                  <h5>Desk Figurines</h5>
+                  <h5>$40.00</h5>
                   <button class="btn btn-danger">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
                     Cart
@@ -433,7 +529,7 @@
               </div>
             </div>
             <!-- Modal -->
-            <div class="product-view-row-2">
+            <div class="product-view-row-4">
               <div class="close-btn">X</div>
               <div class="product-big-image">
                 <img src="images/furniture/double-bed2.jpg" alt="double-bed">
@@ -464,10 +560,10 @@
 
     <div class="footer">
       <div class="footer-content">
-        <div class="footer-section about">
+        <div class="footer-section about" id="about">
           <h1 class="logo-text"><span>Furns</span> Grid.</h1>
             <p>
-              Furns Grid by Design is an online furniture/home decor retailer. We began as a regular Brick and Mortar furniture store located in India offering our customers brand name furniture at affordable prices. Our retail locations are proudly serving residents of India and The Bahamas.Furn Grid by Design website is aimed to provide you with the latest in home furnishings, home decor and accessories at a price you can afford. We always carry products that will be the focus of your home's décor with superior selection, value, and quality.
+              Furns Grid by Design is an online furniture/home decor retailer. We began as a regular Brick and Mortar furniture store located in India offering our customers brand name furniture at affordable prices. Our retail locations are proudly serving residents of India and The Bahamas.Furns Grid by Design website is aimed to provide you with the latest in home furnishings, home decor and accessories at a price you can afford. We always carry products that will be the focus of your home's décor with superior selection, value, and quality.
             </p>
           <div class="contact">
             <span><i class="fas fa-phone"></i> &nbsp; 123-456-789</span>
@@ -484,15 +580,25 @@
           <h2>Quick Links</h2>
           <br>
           <ul>
-            <a href="#"><li>Home</li></a>
-            <a href="#"><li>Pricing</li></a> 
-            <a href="#"><li>Date</li></a>
-            <a href="#"><li>Testimonials</li></a>
-            <a href="#"><li>Contact</li></a>
+            <li class="quick-item">
+              <a class="quick-link" href="#home">Home</a>
+            </li>
+            <li class="quick-item">
+              <a class="quick-link" href="#home-decor">Home Decor</a>
+            </li>
+            <li class="quick-item">
+              <a class="quick-link" href="#office-decor">Office Decor</a>
+            </li>
+            <li class="quick-item">
+              <a class="quick-link" href="#about">About</a>
+            </li>
+            <li class="quick-item">
+              <a class="quick-link" href="#contact-us">Contact</a>
+            </li>
           </ul>
           </br>
         </div>
-        <div class="footer-section form">
+        <div class="footer-section form" id="contact-us">
           <h2>Contact us</h2><br>
           <div id="error_message"></div>
           <form id="contact-form">
@@ -515,7 +621,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-             &copy; Furns Grid. | Designed by Priya
+             &copy; Furns Grid. | Designed by Faiz
       </div>
     </div>   
     <!-- Footer ends -->
@@ -528,4 +634,3 @@
     <script src="index.js"></script>
   </body>
 </html>
-

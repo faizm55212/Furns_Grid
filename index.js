@@ -8,6 +8,30 @@ document.querySelector("button").addEventListener("click", function () {
   header.classList.toggle("toggle-active");
 });
 
+// Login
+
+document.querySelector(".top-most-cta").addEventListener("click", function () {
+  $(".login-popup").fadeIn("1000");
+});
+
+// Login Ends
+
+document
+  .querySelector(".signupbtn-login")
+  .addEventListener("click", function () {
+    $(".login-popup").fadeOut("800");
+    $(".signup-popup").fadeIn("1000");
+  });
+
+document
+  .querySelector(".loginbtn-signup")
+  .addEventListener("click", function () {
+    $(".signup-popup").fadeOut("800");
+    $(".login-popup").fadeIn("1000");
+  });
+
+// Product-view
+
 var noOfProducts = document.querySelectorAll(".card-img-top").length;
 
 for (i = 0; i < noOfProducts; i++) {
@@ -43,11 +67,39 @@ function ModalPopup(product) {
     case "Chair":
       $(".product-view-row-2").fadeIn("1000");
       break;
+    // Office furns
+    case "Office Desk":
+      $(".product-view-row-3").fadeIn("1000");
+      break;
+
+    case "Multipurpose Shelves":
+      $(".product-view-row-3").fadeIn("1000");
+      break;
+
+    case "Comfortable Chair":
+      $(".product-view-row-3").fadeIn("1000");
+      break;
+
+    case "Writing Table":
+      $(".product-view-row-4").fadeIn("1000");
+      break;
+
+    case "Cool Clocks":
+      $(".product-view-row-4").fadeIn("1000");
+      break;
+
+    case "Desk Figurines":
+      $(".product-view-row-4").fadeIn("1000");
+      break;
 
     default:
       break;
   }
 }
+
+// Product-View Ends
+
+//  Close btn of all Popup
 
 $(document).ready(function () {
   $(".close-btn").click(function () {
@@ -55,6 +107,31 @@ $(document).ready(function () {
     $($closebtn).fadeOut("800");
   });
 });
+
+// Scroll-Fix
+
+function offsetAnchor() {
+  if (location.hash.length !== 0) {
+    window.scrollTo(window.scrollX, window.scrollY - 80);
+  }
+}
+
+// Captures click events of all <a> elements with href starting with #
+$(document).on("click", 'a[href^="#"]', function (event) {
+  // Click events are captured before hashchanges. Timeout
+  // causes offsetAnchor to be called after the page jump.
+  window.setTimeout(function () {
+    offsetAnchor();
+  }, 0);
+});
+
+// Set the offset when entering page with hash present in the url
+window.setTimeout(offsetAnchor, 0);
+
+// Scroll-Fix End
+
+// Contact-us
+
 function validation() {
   var name = document.getElementById("name").value;
   var mobileNo = document.getElementById("mobile no.").value;
